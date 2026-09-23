@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="李奕炯的个人作品集 — Web前端开发，项目作品、技能与联系方式">
+  <title>李奕炯 · 个人作品集</title>
+  <link rel="stylesheet" href="css/style.css?v=2">
+</head>
+<body>
+
+  <!-- 移动端顶栏 -->
+  <header class="topbar">
+    <span class="topbar-name">李奕炯<span class="topbar-dot">.</span>Portfolio</span>
+    <button class="menu-toggle" id="menuToggle" aria-label="打开导航菜单" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- 左侧：个人介绍 / 导航 / 技能 -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-top">
+      <img class="avatar"
+           src="https://trae-api-cn.mchost.guru/api/ide/v1/text_to_image?prompt=friendly+young+asian+software+developer+portrait+flat+illustration+minimal+dark+background&image_size=square_hd"
+           alt="李奕炯的头像">
+      <h1 class="name">李奕炯<span class="accent-dot">.</span></h1>
+      <p class="role">Web前端开发</p>
+      <p class="tagline">软件工程专业本科在读，熟悉HTML、CSS、JavaScript、Python。</p>
+    </div>
+
+    <nav class="nav" id="siteNav" aria-label="主导航">
+      <a href="#projects" class="nav-link is-active"><span class="nav-num">01</span>项目作品</a>
+      <a href="#about" class="nav-link"><span class="nav-num">02</span>关于我</a>
+      <a href="#contact" class="nav-link"><span class="nav-num">03</span>联系方式</a>
+    </nav>
+
+    <div class="skills">
+      <h2 class="side-title">技能方向</h2>
+      <ul class="skill-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+      </ul>
+    </div>
+
+    <div class="social">
+      <h2 class="side-title">找到我</h2>
+      <ul class="social-list">
+        <li><a href="mailto:xxx@shturl.">Email ↗</a></li>
+      </ul>
+    </div>
+
+    <p class="copyright">© 2026 Li Yijiong. All rights reserved.</p>
+  </aside>
+
+  <!-- 遮罩（移动端抽屉打开时） -->
+  <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+  <!-- 右侧：主内容区 -->
+  <main class="main">
+
+    <!-- 项目作品 -->
+    <section class="section" id="projects">
+      <header class="section-head reveal">
+        <p class="section-kicker">Selected Works</p>
+        <h2 class="section-title">项目作品</h2>
+        <p class="section-desc">以下是我的项目经历。</p>
+      </header>
+      <div class="project-list" id="projectList"><!-- 由 js/main.js 渲染 --></div>
+    </section>
+
+    <!-- 关于我 -->
+    <section class="section" id="about">
+      <header class="section-head reveal">
+        <p class="section-kicker">About Me</p>
+        <h2 class="section-title">关于我</h2>
+      </header>
+      <div class="about-body reveal">
+        <div class="about-text">
+          <p>软件工程专业，本科在读。</p>
+          <p>Web 前端开发方向，熟悉 <strong>HTML、CSS、JavaScript、Python</strong>。</p>
+        </div>
+        <dl class="about-facts">
+          <div><dt>专业</dt><dd>软件工程</dd></div>
+          <div><dt>状态</dt><dd>本科在读</dd></div>
+          <div><dt>方向</dt><dd>Web 前端开发</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section class="section" id="contact">
+      <header class="section-head reveal">
+        <p class="section-kicker">Contact</p>
+        <h2 class="section-title">联系方式</h2>
+        <p class="section-desc">欢迎通过邮件与我联系。</p>
+      </header>
+      <div class="contact-body reveal">
+        <a class="contact-mail" href="mailto:xxx@shturl.">xxx@shturl.<span class="contact-arrow">→</span></a>
+        <ul class="contact-list">
+          <li><span class="contact-label">姓名</span>李奕炯</li>
+          <li><span class="contact-label">专业</span>软件工程</li>
+          <li><span class="contact-label">状态</span>本科在读</li>
+        </ul>
+      </div>
+      <footer class="footer">Designed &amp; built by 李奕炯 with vanilla HTML / CSS / JS</footer>
+    </section>
+
+  </main>
+
+  <!-- 回到顶部按钮 -->
+  <button class="back-to-top" id="backToTop" aria-label="回到顶部" title="回到顶部">↑</button>
+
+  <script src="js/main.js?v=2"></script>
+</body>
+</html>
