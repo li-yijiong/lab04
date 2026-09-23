@@ -1,15 +1,15 @@
 /* ============================================================
-   个人作品集 — 深色侧边栏 + 浅色主内容
-   桌面端（≥1024px）：左侧固定深色侧栏 / 右侧浅色滚动主区
-   移动端（<1024px）：上下布局 + 覆盖式汉堡菜单抽屉
+      + 
+   1024px / 
+   <1024px + 
    ============================================================ */
 
-/* ---------- 设计变量 ---------- */
+/* ----------  ---------- */
 :root {
   --sidebar-w: 320px;
   --topbar-h: 60px;
 
-  --bg-side: #16213e;        /* 侧边栏：深蓝色 */
+  --bg-side: #16213e;        /*  */
   --bg-side-soft: #1f2c50;
   --bg-main: #f7f6f2;
   --bg-card: #ffffff;
@@ -19,13 +19,13 @@
   --ink-side: #e8e9ec;
   --ink-side-soft: #9aa0ab;
 
-  --accent: #c5f24e;        /* 强调色：亮黄绿 */
+  --accent: #c5f24e;        /*  */
   --accent-ink: #16181d;
 
   --line: #e3e1da;
   --line-side: #2c3a63;
   --radius: 14px;
-  --radius-card: 22px;      /* 项目卡片圆角 */
+  --radius-card: 22px;      /*  */
 
   --shadow-card: 0 1px 2px rgba(28, 30, 34, .05), 0 8px 24px rgba(28, 30, 34, .06);
   --shadow-hover: 0 6px 14px rgba(28, 30, 34, .08), 0 18px 40px rgba(28, 30, 34, .12);
@@ -34,7 +34,7 @@
   --font: "PingFang SC", "Microsoft YaHei", "Segoe UI", system-ui, -apple-system, sans-serif;
 }
 
-/* ---------- 基础重置 ---------- */
+/* ----------  ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
@@ -57,10 +57,10 @@ button { font-family: inherit; }
 
 ::selection { background: var(--accent); color: var(--accent-ink); }
 
-/* 锚点跳转时留出顶栏空间 */
+/*  */
 section[id] { scroll-margin-top: 84px; }
 
-/* ---------- 移动端顶栏 ---------- */
+/* ----------  ---------- */
 .topbar {
   display: none;
   position: fixed;
@@ -78,7 +78,7 @@ section[id] { scroll-margin-top: 84px; }
 .topbar-name { font-weight: 700; letter-spacing: .5px; }
 .topbar-dot { color: var(--accent); margin: 0 2px; }
 
-/* 汉堡按钮 */
+/*  */
 .menu-toggle {
   display: inline-flex;
   flex-direction: column;
@@ -106,7 +106,7 @@ section[id] { scroll-margin-top: 84px; }
 .menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================================
-   左侧栏
+   
    ============================================================ */
 .sidebar {
   position: fixed;
@@ -168,7 +168,7 @@ section[id] { scroll-margin-top: 84px; }
   margin-bottom: 14px;
 }
 
-/* ---------- 导航 ---------- */
+/* ----------  ---------- */
 .nav { display: flex; flex-direction: column; gap: 4px; }
 
 .nav-link {
@@ -195,7 +195,7 @@ section[id] { scroll-margin-top: 84px; }
 .nav-link.is-active { background: var(--accent); color: var(--accent-ink); }
 .nav-link.is-active .nav-num { color: rgba(22, 24, 29, .55); }
 
-/* ---------- 技能 ---------- */
+/* ----------  ---------- */
 .skill-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
 .skill-list li {
@@ -215,7 +215,7 @@ section[id] { scroll-margin-top: 84px; }
   box-shadow: 0 4px 12px rgba(197, 242, 78, .25);
 }
 
-/* ---------- 社交 ---------- */
+/* ----------  ---------- */
 .social-list a {
   display: inline-block;
   font-size: 14px;
@@ -233,7 +233,7 @@ section[id] { scroll-margin-top: 84px; }
   opacity: .7;
 }
 
-/* ---------- 遮罩 ---------- */
+/* ----------  ---------- */
 .overlay {
   position: fixed;
   inset: 0;
@@ -245,7 +245,7 @@ section[id] { scroll-margin-top: 84px; }
 }
 
 /* ============================================================
-   右侧主内容区
+   
    ============================================================ */
 .main {
   margin-left: var(--sidebar-w);
@@ -293,7 +293,7 @@ section[id] { scroll-margin-top: 84px; }
   font-size: 15px;
 }
 
-/* ---------- 项目卡片 ---------- */
+/* ----------  ---------- */
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -362,7 +362,7 @@ section[id] { scroll-margin-top: 84px; }
 
 .project-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
 
-/* ---------- 关于我 ---------- */
+/* ----------  ---------- */
 .about-body {
   display: grid;
   grid-template-columns: 1.4fr 1fr;
@@ -394,7 +394,7 @@ section[id] { scroll-margin-top: 84px; }
 .about-facts dt { font-size: 13px; color: var(--ink-soft); }
 .about-facts dd { font-size: 14px; font-weight: 600; text-align: right; }
 
-/* ---------- 联系方式 ---------- */
+/* ----------  ---------- */
 .contact-body { display: flex; flex-direction: column; gap: 26px; }
 
 .contact-mail {
@@ -443,7 +443,7 @@ section[id] { scroll-margin-top: 84px; }
   color: var(--ink-soft);
 }
 
-/* ---------- 回到顶部 ---------- */
+/* ----------  ---------- */
 .back-to-top {
   position: fixed;
   right: 28px;
@@ -467,7 +467,7 @@ section[id] { scroll-margin-top: 84px; }
 .back-to-top.is-visible { opacity: 1; visibility: visible; transform: translateY(0); }
 .back-to-top:hover { background: var(--accent); color: var(--accent-ink); }
 
-/* ---------- 滚动进入动画 ---------- */
+/* ----------  ---------- */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -477,7 +477,7 @@ section[id] { scroll-margin-top: 84px; }
 .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
 /* ============================================================
-   响应式：移动端上下布局 + 抽屉菜单
+    + 
    ============================================================ */
 @media (max-width: 1023px) {
   .topbar { display: flex; }
@@ -515,7 +515,7 @@ section[id] { scroll-margin-top: 84px; }
   .contact-list li { justify-content: space-between; }
 }
 
-/* 尊重系统减弱动效偏好 */
+/*  */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *, *::before, *::after {
@@ -524,3 +524,22 @@ section[id] { scroll-margin-top: 84px; }
   }
   .reveal { opacity: 1; transform: none; }
 }
+:root {
+  --bg-color: #ffffff;
+  --text-color: #222222;
+}
+.dark {
+  --bg-color: #1a1a1a;
+  --text-color: #f0f0f0;
+}
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.3s;
+}
+
+
+
+
+
+
