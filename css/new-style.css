@@ -1,0 +1,138 @@
+:root {
+  --bg-side: #16213e;
+  --bg-side-soft: #1f2c50;
+  --bg-main: #121212;
+  --bg-card: #222222;
+  --ink: #eeeeee;
+  --ink-soft: #aaaaaa;
+  --ink-side: #e8e9ec;
+  --ink-side-soft: #9aa0ab;
+  --accent: #c5f24e;
+  --accent-ink: #16181d;
+  --line: #333333;
+  --line-side: #2c3a63;
+  --radius: 14px;
+  --ease: ease;
+}
+
+/* 浅色主题，html加上light类就生效 */
+html.light {
+  --bg-side: #ffffff;
+  --bg-side-soft: #efefef;
+  --bg-main: #f7f6f2;
+  --bg-card: #ffffff;
+  --ink: #111111;
+  --ink-soft: #555555;
+  --ink-side: #222222;
+  --ink-side-soft: #666666;
+  --line: #e3e1da;
+  --line-side: #dddddd;
+}
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+body {
+  font-family:system-ui;
+  background:var(--bg-main);
+  color:var(--ink);
+  transition: background-color 0.3s var(--ease), color 0.3s var(--ease);
+}
+
+/* 顶部导航栏 */
+.topbar {
+  height:60px;
+  background:var(--bg-side);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 20px;
+  border-bottom:1px solid var(--line-side);
+}
+.topbar-name {
+  font-size:18px;
+  font-weight:bold;
+  color:var(--ink-side);
+}
+#themeBtn {
+  padding:6px 14px;
+  border:1px solid var(--ink-side);
+  border-radius:8px;
+  background:transparent;
+  color:var(--ink-side);
+  cursor:pointer;
+  transition:0.2s;
+}
+#themeBtn:hover {
+  background:var(--accent);
+  color:var(--accent-ink);
+  border-color:var(--accent);
+}
+
+.container {
+  display:flex;
+}
+.sidebar {
+  width:320px;
+  height:calc(100vh - 60px);
+  background:var(--bg-side);
+  border-right:1px solid var(--line-side);
+  padding:24px;
+  overflow-y:auto;
+  color:var(--ink-side);
+}
+.avatar {
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  margin-bottom:12px;
+}
+.subtitle {
+  color:var(--accent);
+  margin:8px 0;
+}
+.nav {
+  margin:24px 0;
+}
+.nav-item {
+  display:block;
+  padding:10px 12px;
+  margin:6px 0;
+  border-radius:var(--radius);
+  text-decoration:none;
+  color:var(--ink-side);
+}
+.nav-item.active {
+  background:var(--accent);
+  color:var(--accent-ink);
+}
+.skill {
+  margin-top:30px;
+}
+.skill-tag {
+  display:flex;
+  gap:8px;
+  margin-top:10px;
+  flex-wrap:wrap;
+}
+.skill-tag span {
+  padding:4px 10px;
+  border:1px solid var(--ink-side-soft);
+  border-radius:20px;
+  font-size:13px;
+}
+.footer {
+  margin-top:40px;
+  color:var(--ink-side-soft);
+  font-size:13px;
+}
+.main {
+  flex:1;
+  padding:30px;
+  background:var(--bg-main);
+}
+.menu-toggle {
+  display:none;
+}
